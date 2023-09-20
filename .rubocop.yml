@@ -1,0 +1,90 @@
+require:
+  - 'rubocop-rails'
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'spec/rails-app*/**/*'
+    - 'vendor/bundle/**/*'
+  NewCops: enable
+  TargetRubyVersion: 2.7
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Layout/LineLength:
+  Enabled: false
+Rails:
+  Enabled: true
+Style/Documentation:
+  Enabled: false
+Style/ExponentialNotation:
+  Enabled: true
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Layout/ExtraSpacing:
+  Exclude:
+    - 'Gemfile'
+    - '*.gemspec'
+Lint/UselessAssignment:
+  Exclude:
+    - 'db/**/*'
+Metrics/AbcSize:
+  Exclude:
+    - 'db/**/*'
+Metrics/BlockLength:
+  Exclude:
+    - '*.gemspec'
+    - 'app/models/concerns/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'spec/**/*'
+Metrics/ClassLength:
+  Exclude:
+    - 'db/**/*'
+Metrics/MethodLength:
+  Exclude:
+    - 'db/**/*'
+Rails/HttpPositionalArguments:
+  Include:
+    - 'spec/**/*'
+Rails/NotNullColumn:
+  Exclude:
+    - 'db/**/*'
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'spec/**/*'
+Style/FormatStringToken:
+  EnforcedStyle: template
+  SupportedStyles:
+    - annotated
+    - template
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    default: '()'
+    '%i': '()'
+    '%w': '()'
+Style/RedundantFetchBlock:
+  Enabled: true
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+Style/RedundantRegexpEscape:
+  Enabled: true
+Style/SlicingWithRange:
+  Enabled: true
